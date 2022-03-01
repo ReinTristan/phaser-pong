@@ -5,5 +5,5 @@ export default defineConfig({
     build: {
         outDir: '../dist'
     },
-    base:'https://reintristan.github.io/phaser-pong'
+    base:'/phaser-pong/'
 })
