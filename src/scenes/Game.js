@@ -1,4 +1,4 @@
-import Phaser from 'phaser'
+import { Scene, Math } from 'phaser'
 import { GameBackground, GameOver } from '../consts/SceneKeys'
 import * as Colors from '../consts/Colors'
 import { PressStart2P } from '../consts/Fonts'
@@ -9,10 +9,10 @@ const GameState = {
 	PlayerWon: 'player-won',
 	AiWon: 'ai-Won',
 }
-class Game extends Phaser.Scene {
+class Game extends Scene {
 	init() {
 		this.gameState = GameState.running
-		this.paddleRightVelocity = new Phaser.Math.Vector2(0, 0)
+		this.paddleRightVelocity = new Math.Vector2(0, 0)
 		this.leftScore = 0
 		this.rightScore = 0
 		this.pause = false

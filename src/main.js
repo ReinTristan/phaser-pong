@@ -1,4 +1,4 @@
-import Phaser from 'phaser'
+import { Game as GameInstance } from 'phaser'
 
 import TitleScreen from './scenes/TitleScreen'
 import Game from './scenes/Game'
@@ -24,7 +24,7 @@ const config = {
 	parent,
 }
 
-const game = new Phaser.Game(config)
+const game = new GameInstance(config)
 game.scene.add(sceneKeys.TitleScreen, TitleScreen)
 game.scene.add(sceneKeys.Game, Game)
 game.scene.add(sceneKeys.GameBackground, GameBackground)
