@@ -1,9 +1,9 @@
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-    root: 'src',
-    build: {
-        outDir: '../dist'
-    },
-    base:'/phaser-pong/'
+	build: {
+		outDir: 'dist',
+	},
+	base: '/phaser-pong/',
+	publicDir: 'public',
 })
