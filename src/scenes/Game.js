@@ -1,4 +1,4 @@
-import { Scene, Math } from 'phaser'
+import { Scene, Math as PhaserMath } from 'phaser'
 import { GameBackground, GameOver } from '../consts/SceneKeys'
 import * as Colors from '../consts/Colors'
 import { PressStart2P } from '../consts/Fonts'
@@ -12,7 +12,7 @@ const GameState = {
 class Game extends Scene {
 	init() {
 		this.gameState = GameState.running
-		this.paddleRightVelocity = new Math.Vector2(0, 0)
+		this.paddleRightVelocity = new PhaserMath.Vector2(0, 0)
 		this.leftScore = 0
 		this.rightScore = 0
 		this.pause = false
@@ -106,7 +106,6 @@ class Game extends Scene {
 	}
 	updateAI() {
 		const diff = this.ball.y - this.rightPaddle.y
-
 		if (Math.abs(diff) < 10) return
 		const aiSpeed = 3
 
